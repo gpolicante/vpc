@@ -2,23 +2,23 @@
 variable "cidr_infracloudops" {
   type        = string
   description = "Block CIDR TO CIDR"
- 
+  default     = null
 
 }
 
 variable "team_infracloudops" {
-  type = string
-
+  type    = string
+  default = null
 }
 
 variable "cidr_subnet_one" {
   type    = string
-
+  default = null
 }
 
 variable "cidr_subnet_two" {
   type    = string
-
+  default = null
 }
 
 variable "tags" {
