@@ -6,8 +6,10 @@ resource "aws_vpc" "vpc_cloudops" {
 
   tags = {
 
-    Name = var.name_infracloudops
-    Team = var.team_infracloudops
+    var.tags
+    
   }
 
 }
+
+
