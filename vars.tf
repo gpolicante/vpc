@@ -1,4 +1,11 @@
 
+variable "region" {
+  type    = string
+
+
+
+}
+
 
 variable "name_infracloudops" {
   type    = string
