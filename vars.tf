@@ -6,25 +6,31 @@ variable "cidr_infracloudops" {
 
 }
 
-variable "team_infracloudops" {
-  type    = string
-  default = null
-}
-
-variable "cidr_subnet_one" {
-  type    = string
-  default = null
-}
-
-variable "cidr_subnet_two" {
-  type    = string
-  default = null
-}
 
 variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)
   default     = {}
+}
+
+variable "az_infracloudops" {
+  type    = list(string)
+  default = []
+
+}
+
+variable "private_subnets" {
+  type    = list(string)
+  default = []
+
+
+}
+
+variable "public_subnets" {
+  type    = list(string)
+  default = []
+
+
 }
 
 
