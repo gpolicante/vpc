@@ -6,6 +6,14 @@ variable "cidr_infracloudops" {
 
 }
 
+variable "aws_vpc_thor" { 
+type = string 
+description = "vpc id"
+default = null
+
+
+}
+
 
 variable "tags" {
   description = "A map of tags to add to all resources"
