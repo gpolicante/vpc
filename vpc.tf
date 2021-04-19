@@ -1,12 +1,12 @@
 
 
-# resource "aws_vpc" "vpc_cloudops" {
+resource "aws_vpc" "vpc_cloudops" {
 
-#   cidr_block = var.cidr_infracloudops
+  cidr_block = var.cidr_infracloudops
 
-#   tags = var.tags
+  tags = var.tags
  
   
-# }
+}
 
 
