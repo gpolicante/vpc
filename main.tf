@@ -1,7 +1,7 @@
 
 resource "aws_subnet" "subnet_primary" {
 
-  vpc_id            = var.aws_vpc_thor
+  vpc_id            = aws_vpc.vpc_cloudops.id
   cidr_block        = var.private_subnets[0]
   availability_zone = var.az_infracloudops[0]
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "subnet_primary" {
 
 resource "aws_subnet" "subnet_second" {
 
-  vpc_id            = var.aws_vpc_thor
+  vpc_id            = aws_vpc.vpc_cloudops.id
   cidr_block        = var.private_subnets[1]
   availability_zone = var.az_infracloudops[1]
 
