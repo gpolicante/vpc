@@ -52,23 +52,23 @@ resource "aws_subnet" "subnet_thr" {
   depends_on = [aws_vpc.vpc_cloudops, ]
 }
 
-resource "aws_subnet" "subnet_quarter" {
+# resource "aws_subnet" "subnet_quarter" {
 
-  vpc_id            = aws_vpc.vpc_cloudops.id
-  cidr_block        = var.private_subnets[3]
-  availability_zone = var.az_infracloudops[3]
+#   vpc_id            = aws_vpc.vpc_cloudops.id
+#   cidr_block        = var.private_subnets[3]
+#   availability_zone = var.az_infracloudops[3]
 
 
-  tags       = merge(
- var.tags, 
-  { 
-      Type = "private"
-  }
+#   tags       = merge(
+#  var.tags, 
+#   { 
+#       Type = "private"
+#   }
 
-  )
+#   )
   
-  depends_on = [aws_vpc.vpc_cloudops, ]
-}
+#   depends_on = [aws_vpc.vpc_cloudops, ]
+# }
 
 
 resource "aws_subnet" "subnet_primary_public" {
@@ -122,19 +122,19 @@ resource "aws_subnet" "subnet_thr_public" {
   depends_on = [aws_vpc.vpc_cloudops, ]
 }
 
-resource "aws_subnet" "subnet_quarter_public" {
+# resource "aws_subnet" "subnet_quarter_public" {
 
-  vpc_id            = aws_vpc.vpc_cloudops.id
-  cidr_block        = var.public_subnets[3]
-  availability_zone = var.az_infracloudops[3]
+#   vpc_id            = aws_vpc.vpc_cloudops.id
+#   cidr_block        = var.public_subnets[3]
+#   availability_zone = var.az_infracloudops[3]
 
 
-  tags       = merge(
- var.tags, 
-  { 
-      Type = "public"
-  }
+#   tags       = merge(
+#  var.tags, 
+#   { 
+#       Type = "public"
+#   }
 
-  )
-  depends_on = [aws_vpc.vpc_cloudops, ]
-}
+#   )
+#   depends_on = [aws_vpc.vpc_cloudops, ]
+# }
